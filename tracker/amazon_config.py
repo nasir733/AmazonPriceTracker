@@ -1,5 +1,5 @@
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from webdriver_manager.firefox import GeckoDriverManager
 from django.shortcuts import render,HttpResponse
 from django.views import View
 
@@ -10,11 +10,11 @@ BASE_URL = "http://www.amazon.de/"
 
 
 def get_chrome_web_driver(options):
-    return webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)
+    return webdriver.Firefox(executable_path=GeckoDriverManager().install(), firefox_options=options)
 
 
 def get_web_driver_options():
-    return webdriver.ChromeOptions()
+    return webdriver.FirefoxOptions()
 
 
 def set_ignore_certificate_error(options):

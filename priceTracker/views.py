@@ -2,7 +2,7 @@ from django.shortcuts import render,HttpResponse
 from django.views import View
 from tracker.simple_tracker import AmazonAPI,GenerateReport
 from tracker.amazon_config import *
-from tracker.reports import *
+from tracker import *
 import json 
 
 
