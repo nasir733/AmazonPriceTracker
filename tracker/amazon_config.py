@@ -10,7 +10,7 @@ BASE_URL = "http://www.amazon.de/"
 
 
 def get_chrome_web_driver(options):
-    return webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
+    return webdriver.Chrome(executable_path=str(os.environ.get("CHROMEDRIVER_PATH")), chrome_options=options)
 
 
 def get_web_driver_options():
