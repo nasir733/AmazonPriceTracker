@@ -1,7 +1,6 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from django.shortcuts import render,HttpResponse
-from django.views import View
+import os
 
 DIRECTORY = 'tracker/reports'
 
@@ -10,7 +9,7 @@ BASE_URL = "http://www.amazon.de/"
 
 
 def get_chrome_web_driver(options):
-    return webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)
+    return webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
 
 
 def get_web_driver_options():
