@@ -9,6 +9,7 @@ from .amazon_config import (
     BASE_URL,
     DIRECTORY
 )
+from .amazon_config import *
 from selenium.common.exceptions import NoSuchElementException
 import json
 from datetime import datetime
@@ -54,7 +55,10 @@ class AmazonAPI:
         self.base_url = base_url
         self.search_term = search_term
         options = get_web_driver_options()
-        # set_automation_as_head_less(options)
+        get_chrome_binary(options)
+        set_automation_as_head_less(options)
+        set_gpu_as_disabled(options)
+        set_no_sand_box(options)
         set_ignore_certificate_error(options)
         set_browser_as_incognito(options)
         self.driver = get_chrome_web_driver(options)
