@@ -26,7 +26,7 @@ SECRET_KEY = '4da#qi9sjq55%_or9lt7i5o*(u!%frz@8fxjp6rhdboolmc5q='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['nasiramazonpricetracker.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'priceTracker.apps.PricetrackerConfig'
+    'priceTracker'
 ]
 
 MIDDLEWARE = [
@@ -120,5 +120,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
+
 django_heroku.settings(locals())
