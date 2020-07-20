@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Amazonpricetracker</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Nasir Amazon Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+            
+        </div>
+    </nav>
+    <h1> </h1>
+    <h1 style="color:white"><strong>Welcome to Nasir's Amazon Price Tracker</strong> <span class="badge badge-success">Python Selenium
+            Script</span></h1>
+    <br>
+    <br>
+    <br>
+
+    <form action="/output" method="POST" class="d-flex justify-content-center flex-wrap"> {% csrf_token %}
+        <h3 style="text-align: center;color:red "><strong>Enter the name of product that you desire to track:</strong></h3>
+        <textarea class="form-control textarea  text-dark" name='product' id="exampleFormControlTextarea1"
+            rows="2" placeholder=ProductName></textarea>
+            <h3 style="text-align: center;color:red "><strong>Enter the minimum price of product that you desire to track:</strong></h3>
+        <textarea class="form-control textarea mt-5" name='min' id="exampleFormControlTextarea1" rows="2"
+            placeholder=MinimumPrice></textarea>
+        <br>
+        <h3 style="text-align: center;color:red " class="mt5"><strong>Enter the maximum price of product that you desire to track:</strong></h3>
+
+        <textarea class="form-control textarea mt-5" name='max' id="exampleFormControlTextarea1" rows="2"
+            placeholder=MaximumPrice></textarea>
+        <br>
+        <button type="submit" class="btn btn-outline-success mt-2">track the price</button>
+
+    </form>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
